@@ -313,6 +313,26 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
 .ft-bottom a:hover{color:var(--teal-l)}
 .q-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,184,160,.15);border:1px solid rgba(0,184,160,.25);border-radius:50px;padding:6px 14px;font-size:12px;color:var(--teal-l)}
 
+/* IMAGES */
+.hero-photo{border-radius:18px;overflow:hidden;margin-bottom:20px;height:210px;position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo-badge{position:absolute;bottom:12px;left:12px;background:rgba(11,31,58,.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);border-radius:50px;padding:6px 14px;font-size:12px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:6px}
+.metier-img{border-radius:var(--r);overflow:hidden;height:420px;margin-bottom:60px;position:relative}
+.metier-img img{width:100%;height:100%;object-fit:cover;display:block}
+.metier-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,31,58,.55) 0%,transparent 60%);display:flex;align-items:flex-end;padding:36px}
+.metier-img-caption{color:var(--white);font-size:20px;font-family:'Fraunces',serif;font-weight:300;max-width:400px;line-height:1.4}
+.metier-img-caption em{color:var(--teal-l);font-style:italic}
+.ac-photo-wrap{border-radius:var(--r);overflow:hidden;height:320px}
+.ac-photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.fin-img{border-radius:var(--r);overflow:hidden;height:260px;margin-bottom:40px}
+.fin-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* FORM SUCCESS */
+.form-success{display:none;text-align:center;padding:48px 32px;background:var(--teal-p);border-radius:var(--r);border:1px solid rgba(0,184,160,.3)}
+.form-success-icon{font-size:52px;margin-bottom:16px}
+.form-success h3{font-family:'Fraunces',serif;font-size:26px;color:var(--navy);margin-bottom:12px}
+.form-success p{font-size:15px;color:var(--text-m);line-height:1.6}
+
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .hero-inner>*{animation:fadeUp .8s ease both}
@@ -362,6 +382,10 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
       </div>
     </div>
     <div class="hero-card">
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=800&q=80" alt="Assistante médicale en cabinet médical" loading="eager">
+        <div class="hero-photo-badge">🏅 Certifié Qualiopi</div>
+      </div>
       <p class="hero-card-title">VAE Formation en chiffres</p>
       <div class="hero-stats">
         <div class="hero-stat"><span class="hero-stat-num">95%</span><span class="hero-stat-label">Taux de réussite au jury CQP</span></div>
@@ -404,6 +428,12 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     <span class="s-tag">Le métier</span>
     <h2 class="s-title">Assistant médical :<br>un métier au cœur du système de santé</h2>
     <p class="metier-intro">Créé par le plan Ma Santé 2022, l'assistant médical est le nouveau pilier des cabinets médicaux. Sans être un professionnel de santé réglementé, il accompagne le médecin dans ses missions quotidiennes — libérant du temps médical précieux et améliorant l'accès aux soins. La convention médicale 2024 vise <strong>15 000 assistants médicaux en poste d'ici 2029</strong>.</p>
+    <div class="metier-img">
+      <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=1400&q=80" alt="Cabinet médical - assistant médical aux côtés du médecin" loading="lazy">
+      <div class="metier-img-overlay">
+        <p class="metier-img-caption">Un métier <em>essentiel</em><br>au cœur du cabinet médical</p>
+      </div>
+    </div>
     <div class="missions">
       <div class="mission"><span class="m-num">01</span><h3>Accueil et prise en charge administrative</h3><p>Accueil des patients, création et gestion du dossier informatique, enregistrement des informations médicales et administratives, déploiement de la télémédecine.</p></div>
       <div class="mission"><span class="m-num">02</span><h3>Préparation et déroulement des consultations</h3><p>Aide à l'habillage / déshabillage, prise des constantes (tension, poids, taille), mise à jour des dépistages et vaccinations, délivrance des tests et kits.</p></div>
@@ -494,12 +524,14 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
           <li>Possibilité de séances en présentiel selon votre localisation</li>
         </ul>
       </div>
-      <div class="ac-box">
-        <span class="ac-box-num">24h</span>
-        <span class="ac-box-label">d'accompagnement personnalisé</span>
-        <p>+ 45 minutes de préparation à la soutenance devant le jury CPNEFP</p>
-        <hr style="border:none;border-top:1px solid rgba(255,255,255,.08);margin:20px 0">
-        <p>Joignabilité garantie sous 48h ouvrées. Un accompagnateur relais vous est attribué en cas d'absence.</p>
+      <div>
+        <div class="ac-photo-wrap" style="margin-bottom:20px">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Accompagnement VAE en visioconférence - suivi individuel" loading="lazy">
+        </div>
+        <div class="ac-box" style="padding:24px 28px">
+          <span class="ac-box-num" style="font-size:52px">24h</span>
+          <span class="ac-box-label" style="font-size:14px">d'accompagnement individuel · réponse sous 48h ouvrées</span>
+        </div>
       </div>
     </div>
   </div>
@@ -511,6 +543,9 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     <span class="s-tag">Financement</span>
     <h2 class="s-title">Votre VAE peut être financée<br>à 100%</h2>
     <p class="fin-intro">La VAE Assistant Médical bénéficie d'une prise en charge financière solide. Dans la majorité des cas, les candidats salariés d'un cabinet médical n'avancent pas un euro. Voici les principaux dispositifs disponibles.</p>
+    <div class="fin-img">
+      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1400&q=80" alt="Professionnel de santé - financement VAE CPF OPCO" loading="lazy">
+    </div>
     <div class="fin-grid">
       <div class="fin-card">
         <div class="fin-head"><span style="font-size:28px">💳</span><span class="fin-tag ft-g">Salarié · Demandeur d'emploi</span></div>
@@ -597,16 +632,18 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
         <div class="ct-det"><span class="ct-icon">🕐</span><div><div style="font-weight:500;font-size:14px">Inscriptions ouvertes toute l'année</div><div style="font-size:13px;color:var(--text-q)">Pas de date butoir — démarrage dès que vous êtes prêt(e)</div></div></div>
         <div class="ct-det"><span class="ct-icon">🏅</span><div><div style="font-weight:500;font-size:14px">Certifié Qualiopi</div><div style="font-size:13px;color:var(--text-q)">Garantie qualité · Financement public autorisé</div></div></div>
       </div>
-      <form onsubmit="return false;">
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
         <div class="form-row">
-          <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" placeholder="Marie"></div>
-          <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" placeholder="Dupont"></div>
+          <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" name="prenom" placeholder="Marie" required></div>
+          <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" placeholder="Dupont" required></div>
         </div>
-        <div class="form-group"><label for="email">E-mail *</label><input type="email" id="email" placeholder="marie.dupont@email.fr"></div>
-        <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" placeholder="06 XX XX XX XX"></div>
+        <div class="form-group"><label for="email">E-mail *</label><input type="email" id="email" name="email" placeholder="marie.dupont@email.fr" required></div>
+        <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" name="telephone" placeholder="06 XX XX XX XX"></div>
         <div class="form-group">
           <label for="profil">Votre profil actuel *</label>
-          <select id="profil">
+          <select id="profil" name="profil" required>
             <option value="">Sélectionnez votre situation</option>
             <option>Secrétaire médical(e) en poste</option>
             <option>Aide-soignant(e)</option>
@@ -617,7 +654,7 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
         </div>
         <div class="form-group">
           <label for="xp">Années d'expérience en lien avec le métier *</label>
-          <select id="xp">
+          <select id="xp" name="experience" required>
             <option value="">Sélectionnez</option>
             <option>Moins d'1 an</option>
             <option>1 à 3 ans</option>
@@ -625,10 +662,36 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
             <option>Plus de 5 ans</option>
           </select>
         </div>
-        <div class="form-group"><label for="msg">Votre message (optionnel)</label><textarea id="msg" placeholder="Décrivez brièvement votre situation et votre objectif..."></textarea></div>
+        <div class="form-group"><label for="msg">Votre message (optionnel)</label><textarea id="msg" name="message" placeholder="Décrivez brièvement votre situation et votre objectif..."></textarea></div>
         <button type="submit" class="btn-submit">Envoyer ma demande →</button>
         <p style="font-size:12px;color:var(--text-q);margin-top:12px;text-align:center">Réponse sous 48h ouvrées · Diagnostic gratuit · Sans engagement</p>
       </form>
+      <div class="form-success" id="form-success">
+        <div class="form-success-icon">✅</div>
+        <h3>Demande envoyée !</h3>
+        <p>Merci <span id="success-prenom"></span>. Notre équipe analyse votre dossier et vous contacte sous <strong>48h ouvrées</strong> pour votre diagnostic d'éligibilité gratuit.</p>
+      </div>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var form = this;
+          var prenom = document.getElementById('prenom').value;
+          var data = new FormData(form);
+          fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams(data).toString()
+          }).then(function() {
+            form.style.display = 'none';
+            var success = document.getElementById('form-success');
+            document.getElementById('success-prenom').textContent = prenom ? prenom + ',' : '';
+            success.style.display = 'block';
+            success.scrollIntoView({behavior: 'smooth', block: 'center'});
+          }).catch(function() {
+            alert('Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@vae-formation.fr');
+          });
+        });
+      </script>
     </div>
   </div>
 </section>
