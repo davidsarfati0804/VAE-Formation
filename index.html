@@ -659,6 +659,59 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
             <option>Plus de 5 ans</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="demarrage">Quand souhaitez-vous démarrer ? *</label>
+          <select id="demarrage" name="demarrage" required>
+            <option value="">Sélectionnez une période</option>
+            <option>Le plus rapidement possible</option>
+            <option>Dans 1 à 3 mois</option>
+            <option>Dans 3 à 6 mois</option>
+            <option>Dans 6 mois ou plus</option>
+            <option>Je souhaite d'abord en savoir plus</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="financement">Dispositif de financement envisagé</label>
+          <select id="financement" name="financement">
+            <option value="">Je ne sais pas encore</option>
+            <option>CPF — Compte Personnel de Formation</option>
+            <option>OPCO EP — via mon employeur</option>
+            <option>Plan de développement des compétences</option>
+            <option>Financement personnel</option>
+            <option>Je souhaite être conseillé(e)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="region">Région</label>
+            <select id="region" name="region">
+              <option value="">Sélectionnez</option>
+              <option>Île-de-France</option>
+              <option>Auvergne-Rhône-Alpes</option>
+              <option>Nouvelle-Aquitaine</option>
+              <option>Occitanie</option>
+              <option>Hauts-de-France</option>
+              <option>Grand Est</option>
+              <option>Provence-Alpes-Côte d'Azur</option>
+              <option>Pays de la Loire</option>
+              <option>Normandie</option>
+              <option>Bretagne</option>
+              <option>Bourgogne-Franche-Comté</option>
+              <option>Centre-Val de Loire</option>
+              <option>DOM-TOM</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="afgsu">Possédez-vous l'AFGSU Niveau 1 ?</label>
+            <select id="afgsu" name="afgsu">
+              <option value="">Sélectionnez</option>
+              <option>Oui, je l'ai déjà</option>
+              <option>Non, pas encore</option>
+              <option>Je ne sais pas ce que c'est</option>
+            </select>
+          </div>
+        </div>
         <div class="form-group"><label for="msg">Votre message (optionnel)</label><textarea id="msg" name="message" placeholder="Décrivez brièvement votre situation et votre objectif..."></textarea></div>
         <button type="submit" class="btn-submit">Envoyer ma demande →</button>
         <p style="font-size:12px;color:var(--text-q);margin-top:12px;text-align:center">Réponse sous 48h ouvrées · Diagnostic gratuit · Sans engagement</p>
