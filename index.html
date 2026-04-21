@@ -12,9 +12,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VAE Assistant Médical — CQP RNCP 40913 | VAE Formation</title>
-<meta name="description" content="VAE Assistant Médical : obtenez le CQP (RNCP 40913) en valorisant votre expérience. 100% distanciel, toute la France. Financement CPF & OPCO EP à 100%. 95% de réussite au jury.">
+<meta name="description" content="Obtenez le CQP Assistant Médical (RNCP 40913) par la VAE. 100% distanciel, CPF & OPCO EP à 100%, 95% de réussite. Diagnostic gratuit.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://vae-formation.com/">
+<link rel="preload" as="image" href="img-hero.png">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B1F3A'/><circle cx='50' cy='50' r='18' fill='%2300B8A0'/></svg>">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -377,6 +380,33 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
 </head>
 <body>
 
+<!-- COOKIE BANNER CNIL -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0B1F3A;color:rgba(255,255,255,.85);padding:20px 5%;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:3px solid #00B8A0">
+  <p style="margin:0;font-size:13px;line-height:1.6;max-width:700px">🍪 Ce site utilise Google Analytics pour mesurer l'audience. Ces cookies nécessitent votre accord. <a href="politique-confidentialite.html" style="color:#00D4BA">En savoir plus</a></p>
+  <div style="display:flex;gap:12px;flex-shrink:0">
+    <button onclick="acceptCookies()" style="background:#00B8A0;color:#fff;border:none;padding:10px 24px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer">Accepter</button>
+    <button onclick="refuseCookies()" style="background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);padding:10px 24px;border-radius:50px;font-size:13px;cursor:pointer">Refuser</button>
+  </div>
+</div>
+<script>
+  (function(){
+    var consent = localStorage.getItem('cookie_consent');
+    if(!consent) document.getElementById('cookie-banner').style.display='flex';
+    if(consent === 'refused') {
+      window['ga-disable-G-ZBCNZMT7EC'] = true;
+    }
+  })();
+  function acceptCookies(){
+    localStorage.setItem('cookie_consent','accepted');
+    document.getElementById('cookie-banner').style.display='none';
+  }
+  function refuseCookies(){
+    localStorage.setItem('cookie_consent','refused');
+    window['ga-disable-G-ZBCNZMT7EC'] = true;
+    document.getElementById('cookie-banner').style.display='none';
+  }
+</script>
+
 <!-- NAV -->
 <nav>
   <a href="#" class="logo"><span class="logo-dot"></span>VAE Formation</a>
@@ -462,7 +492,7 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     </div>
     <h3 class="s-title" style="font-size:24px;margin-bottom:24px">Qui peut devenir assistant médical par la VAE ?</h3>
     <div class="profils-grid">
-      <div class="profil"><span class="profil-icon">🩺</span><div class="profil-t"><strong>Secrétaire médical(e)</strong><span>Avec expérience en cabinet ou au moins 1 an de pratique</span></div></div>
+      <div class="profil"><span class="profil-icon">🩺</span><div class="profil-t"><strong>Secrétaire médicale</strong><span>VAE secrétaire médicale → CQP reconnu nationalement</span></div></div>
       <div class="profil"><span class="profil-icon">👩‍⚕️</span><div class="profil-t"><strong>Aide-soignant(e)</strong><span>Reconversion partielle vers le secteur libéral</span></div></div>
       <div class="profil"><span class="profil-icon">🏥</span><div class="profil-t"><strong>Infirmier(e) / Auxiliaire de puériculture</strong><span>Passerelle vers le cabinet médical</span></div></div>
     </div>
@@ -741,7 +771,7 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     </div>
     <div class="ft-bottom">
       <span>© 2026 VAE Formation · N° de déclaration d'activité en cours d'enregistrement · Certification Qualiopi en cours</span>
-      <div style="display:flex;gap:20px"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV</a><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="#">Règlement intérieur</a></div>
+      <div style="display:flex;gap:20px"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">CGV</a><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="reglement-interieur.html">Règlement intérieur</a></div>
     </div>
   </div>
 </footer>
