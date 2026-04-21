@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vae-formation.netlify.app/sitemap.xml
+Sitemap: https://vae-formation.com/sitemap.xml

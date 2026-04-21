@@ -1,0 +1,7 @@
+# Credentials Google — ne jamais commiter
+*.json
+!package.json
+seo_config.py
+
+# OS
+.DS_Store
