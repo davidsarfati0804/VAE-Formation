@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBCNZMT7EC"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZBCNZMT7EC');
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  (function(){
+    if(localStorage.getItem('cookie_consent')==='accepted'){
+      var s=document.createElement('script');
+      s.async=true;
+      s.src='https://www.googletagmanager.com/gtag/js?id=G-ZBCNZMT7EC';
+      s.onload=function(){gtag('js',new Date());gtag('config','G-ZBCNZMT7EC');};
+      document.head.appendChild(s);
+    }
+  })();
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VAE Assistant Médical — CQP RNCP 40913 | VAE Formation</title>
-<meta name="description" content="Obtenez le CQP Assistant Médical (RNCP 40913) par la VAE. 100% distanciel, CPF & OPCO EP à 100%, 95% de réussite. Diagnostic gratuit.">
+<meta name="description" content="Obtenez le CQP Assistant Médical RNCP 40913 par la VAE. Financement CPF & OPCO EP à 100%. 95% de réussite. Diagnostic gratuit.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://vae-formation.com/">
 <link rel="preload" as="image" href="img-hero.png">
@@ -43,47 +48,70 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "EducationalOrganization",
       "@id": "https://vae-formation.com/#organization",
       "name": "VAE Formation",
       "url": "https://vae-formation.com/",
-      "logo": "https://vae-formation.com/og-image.jpg",
-      "description": "Centre de formation spécialisé VAE Assistant Médical.",
+      "logo": {"@type": "ImageObject","url": "https://vae-formation.com/og-image.jpg","width": 1200,"height": 630},
+      "description": "Centre de formation spécialisé dans l'accompagnement VAE CQP Assistant Médical (RNCP 40913). Accompagnateurs certifiés AAP. 100% distanciel, France entière.",
       "email": "contact@vae-formation.com",
       "telephone": "+33668266226",
-      "areaServed": "FR"
+      "address": {"@type": "PostalAddress","streetAddress": "6 rue des Écoles","addressLocality": "Brouilla","postalCode": "66620","addressRegion": "Pyrénées-Orientales","addressCountry": "FR"},
+      "areaServed": {"@type": "Country","name": "France"},
+      "contactPoint": {"@type": "ContactPoint","telephone": "+33668266226","email": "contact@vae-formation.com","contactType": "customer service","availableLanguage": "French"},
+      "hasCredential": {"@type": "EducationalOccupationalCredential","name": "CQP Assistant Médical","credentialCategory": "certification","recognizedBy": {"@type": "Organization","name": "CPNEFP des cabinets médicaux","url": "https://ccn-cabinets-medicaux.fr"},"url": "https://www.francecompetences.fr/recherche/rncp/40913/"}
     },
     {
-      "@type": "EducationalOrganization",
-      "@id": "https://vae-formation.com/#educational-org",
-      "name": "VAE Formation",
+      "@type": "WebSite",
+      "@id": "https://vae-formation.com/#website",
       "url": "https://vae-formation.com/",
-      "description": "Centre de formation spécialisé dans l'accompagnement VAE CQP Assistant Médical (RNCP 40913). 100% distanciel, toute la France.",
-      "email": "contact@vae-formation.com",
-      "telephone": "+33668266226",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "FR"
-      },
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "name": "CQP Assistant Médical RNCP 40913"
-      }
+      "name": "VAE Formation",
+      "publisher": {"@id": "https://vae-formation.com/#organization"},
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vae-formation.com/#webpage",
+      "url": "https://vae-formation.com/",
+      "name": "VAE Assistant Médical — CQP RNCP 40913 | VAE Formation",
+      "description": "Obtenez le CQP Assistant Médical RNCP 40913 par la VAE. Financement CPF & OPCO EP à 100%. 95% de réussite. Diagnostic gratuit.",
+      "isPartOf": {"@id": "https://vae-formation.com/#website"},
+      "about": {"@id": "https://vae-formation.com/#organization"},
+      "inLanguage": "fr",
+      "dateModified": "2026-04-21"
     },
     {
       "@type": "Course",
       "@id": "https://vae-formation.com/#course",
-      "name": "VAE CQP Assistant Médical — RNCP 40913",
-      "description": "Accompagnement VAE pour l'obtention du CQP Assistant Médical (RNCP 40913). 100% distanciel, 9 à 12 mois, financement CPF et OPCO EP.",
+      "name": "Accompagnement VAE — CQP Assistant Médical RNCP 40913",
+      "description": "Accompagnement individuel par un AAP certifié pour l'obtention du CQP Assistant Médical (RNCP 40913) par la voie VAE. 100% distanciel, 9 à 12 mois, financement CPF et OPCO EP à 100%.",
+      "url": "https://vae-formation.com/",
       "provider": {"@id": "https://vae-formation.com/#organization"},
       "educationalCredentialAwarded": "CQP Assistant Médical RNCP 40913",
+      "occupationalCredentialAwarded": "CQP Assistant Médical — Niveau 4",
       "courseMode": "online",
       "inLanguage": "fr",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "EUR",
-        "description": "Financement possible à 100% via CPF ou OPCO EP"
+      "timeToComplete": "P9M",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "instructor": {"@type": "Person","name": "Accompagnateur certifié AAP","jobTitle": "Architecte Accompagnateur de Parcours"},
+        "offers": {"@type": "Offer","url": "https://vae-formation.com/#contact","priceCurrency": "EUR","price": "0","description": "Financement à 100% via CPF ou OPCO EP dans la majorité des cas.","availability": "https://schema.org/InStock","validFrom": "2026-01-01"}
       }
+    },
+    {
+      "@type": "EducationalOccupationalProgram",
+      "@id": "https://vae-formation.com/#program",
+      "name": "VAE CQP Assistant Médical — RNCP 40913",
+      "description": "Programme d'accompagnement VAE pour l'obtention du CQP Assistant Médical inscrit au RNCP sous le numéro 40913.",
+      "url": "https://vae-formation.com/",
+      "provider": {"@id": "https://vae-formation.com/#organization"},
+      "programType": "VAE — Validation des Acquis de l'Expérience",
+      "educationalProgramMode": "distance",
+      "timeToComplete": "P9M",
+      "financialAidEligible": "CPF, OPCO EP, Plan de Développement des Compétences",
+      "offers": {"@type": "Offer","url": "https://vae-formation.com/#contact","priceCurrency": "EUR","price": "0","description": "Financement possible à 100% via CPF ou OPCO EP.","availability": "https://schema.org/InStock"},
+      "educationalCredentialAwarded": {"@type": "EducationalOccupationalCredential","name": "CQP Assistant Médical","credentialCategory": "certification","url": "https://www.francecompetences.fr/recherche/rncp/40913/","recognizedBy": {"@type": "Organization","name": "CPNEFP des cabinets médicaux"}}
     },
     {
       "@type": "FAQPage",
@@ -177,7 +205,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,184,160,.15);border:1px solid rgba(0,184,160,.3);color:var(--teal-l);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:28px}
 .hero h1{font-size:clamp(42px,5vw,68px);line-height:1.08;color:var(--white);margin-bottom:28px}
 .hero h1 em{font-style:italic;color:var(--teal-l)}
-.hero-desc{font-size:18px;line-height:1.7;color:rgba(255,255,255,.65);max-width:520px;margin-bottom:44px}
+.hero-desc{font-size:18px;line-height:1.7;color:rgba(255,255,255,.80);font-weight:400;max-width:520px;margin-bottom:36px}
+.hero-phone{margin-top:16px;font-size:14px;color:rgba(255,255,255,.5)}
+.hero-phone a{color:var(--teal-l);text-decoration:none;font-weight:500}
+.hero-phone a:hover{text-decoration:underline}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{background:var(--teal);color:var(--white);padding:16px 32px;border-radius:50px;font-size:15px;font-weight:500;text-decoration:none;transition:all .2s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--teal-l);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,184,160,.35)}
@@ -383,6 +414,13 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
 .hero-inner>*{animation:fadeUp .8s ease both}
 .hero-inner>*:nth-child(2){animation-delay:.15s}
 
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
+.hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner,.what-grid,.elig-grid,.ct-grid,.ac-detail{grid-template-columns:1fr}
@@ -394,7 +432,12 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
   .kpis{grid-template-columns:1fr 1fr}
   .faq-grid{grid-template-columns:1fr}
   .ft-top{grid-template-columns:1fr 1fr}
-  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:rgba(255,255,255,.98);flex-direction:column;padding:16px 5%;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(11,31,58,.08);backdrop-filter:blur(12px)}
+  .nav-links.open{display:flex}
+  .nav-links li{padding:12px 0;border-bottom:1px solid var(--border)}
+  .nav-links li:last-child{border-bottom:none;padding-top:16px}
+  .btn-nav{display:block;text-align:center}
 }
 </style>
 </head>
@@ -412,17 +455,22 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
   (function(){
     var consent = localStorage.getItem('cookie_consent');
     if(!consent) document.getElementById('cookie-banner').style.display='flex';
-    if(consent === 'refused') {
-      window['ga-disable-G-ZBCNZMT7EC'] = true;
-    }
   })();
+  function loadGA4(){
+    window.dataLayer=window.dataLayer||[];
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-ZBCNZMT7EC';
+    s.onload=function(){gtag('js',new Date());gtag('config','G-ZBCNZMT7EC');};
+    document.head.appendChild(s);
+  }
   function acceptCookies(){
     localStorage.setItem('cookie_consent','accepted');
     document.getElementById('cookie-banner').style.display='none';
+    loadGA4();
   }
   function refuseCookies(){
     localStorage.setItem('cookie_consent','refused');
-    window['ga-disable-G-ZBCNZMT7EC'] = true;
     document.getElementById('cookie-banner').style.display='none';
   }
 </script>
@@ -430,7 +478,7 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
 <!-- NAV -->
 <nav>
   <a href="#" class="logo"><span class="logo-dot"></span>VAE Formation</a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#metier">Le métier</a></li>
     <li><a href="#eligibilite">Éligibilité</a></li>
     <li><a href="#parcours">Parcours</a></li>
@@ -438,6 +486,9 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     <li><a href="#resultats">Résultats</a></li>
     <li><a href="#contact" class="btn-nav">Je démarre ma VAE</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -452,10 +503,14 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
         <a href="#contact" class="btn-primary">Vérifier mon éligibilité →</a>
         <a href="#parcours" class="btn-secondary">Découvrir le parcours</a>
       </div>
+      <p class="hero-phone">ou appelez directement : <a href="tel:+33668266226" aria-label="Appeler le 06 68 26 62 26">06 68 26 62 26</a></p>
     </div>
     <div class="hero-card">
       <div class="hero-photo">
-        <img src="img-hero.png" alt="Assistante médicale en cabinet médical" loading="eager" width="420" height="210">
+        <picture>
+          <source srcset="img-hero.webp" type="image/webp">
+          <img src="img-hero.png" alt="Assistante médicale en cabinet médical" loading="eager" width="420" height="210">
+        </picture>
       </div>
       <p class="hero-card-title">VAE Formation en chiffres</p>
       <div class="hero-stats">
@@ -499,7 +554,10 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     <h2 class="s-title">Assistant médical :<br>un métier au cœur du système de santé</h2>
     <p class="metier-intro">Créé par le plan Ma Santé 2022, l'assistant médical est le nouveau pilier des cabinets médicaux. Sans être un professionnel de santé réglementé, il accompagne le médecin dans ses missions quotidiennes — libérant du temps médical précieux et améliorant l'accès aux soins. La convention médicale 2024 vise <strong>15 000 assistants médicaux en poste d'ici 2029</strong>.</p>
     <div class="metier-img">
-      <img src="img-metier.png" alt="Assistante médicale aux côtés du médecin en cabinet" loading="lazy" width="1200" height="420">
+      <picture>
+        <source srcset="img-metier.webp" type="image/webp">
+        <img src="img-metier.png" alt="Assistante médicale aux côtés du médecin en cabinet" loading="lazy" width="1200" height="420">
+      </picture>
       <div class="metier-img-overlay">
         <p class="metier-img-caption">Un métier <em>essentiel</em><br>au cœur du cabinet médical</p>
       </div>
@@ -595,7 +653,10 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
         </ul>
       </div>
       <div>
-        <img src="img-accompagnement.png" alt="Ce que comprend votre accompagnement VAE" loading="lazy" style="width:100%;max-height:600px;object-fit:contain;display:block;border-radius:var(--r);background:var(--white);padding:12px">
+        <picture>
+          <source srcset="img-accompagnement.webp" type="image/webp">
+          <img src="img-accompagnement.png" alt="Ce que comprend votre accompagnement VAE" loading="lazy" width="600" height="600" style="width:100%;max-height:600px;object-fit:contain;display:block;border-radius:var(--r);background:var(--white);padding:12px">
+        </picture>
       </div>
     </div>
   </div>
@@ -726,7 +787,7 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
     <p>Prenez 5 minutes pour nous parler de votre parcours. Nous vous disons si vous êtes éligible — gratuitement, sans engagement.</p>
     <div class="cta-btns">
       <a href="#contact" class="btn-primary" style="font-size:16px;padding:18px 36px">Démarrer mon diagnostic gratuit →</a>
-      <a href="tel:+33668266226" class="btn-light">📞 Nous appeler</a>
+      <a href="tel:+33668266226" class="btn-light" aria-label="Appeler le 06 68 26 62 26">📞 Nous appeler</a>
     </div>
   </div>
 </section>
@@ -740,7 +801,7 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
         <h2 class="s-title">Parlons de<br>votre projet</h2>
         <p>Notre équipe vous répond sous 48 heures ouvrées. Lors de ce premier échange, nous analysons gratuitement votre éligibilité et vous orientons vers le meilleur dispositif de financement.</p>
         <div class="ct-det"><span class="ct-icon">📧</span><div><div style="font-weight:500;font-size:14px">E-mail</div><div style="font-size:13px;color:var(--text-q)">contact@vae-formation.com</div></div></div>
-        <div class="ct-det"><span class="ct-icon">📞</span><div><div style="font-weight:500;font-size:14px">Téléphone</div><div style="font-size:13px;color:var(--text-q)"><a href="tel:+33668266226" style="color:inherit;text-decoration:none">06 68 26 62 26</a></div></div></div>
+        <div class="ct-det"><span class="ct-icon">📞</span><div><div style="font-weight:500;font-size:14px">Téléphone</div><div style="font-size:13px;color:var(--text-q)"><a href="tel:+33668266226" style="color:inherit;text-decoration:none" aria-label="Appeler le 06 68 26 62 26">06 68 26 62 26</a></div></div></div>
       <div class="ct-det"><span class="ct-icon">🖥️</span><div><div style="font-weight:500;font-size:14px">100% distanciel</div><div style="font-size:13px;color:var(--text-q)">Toute la France — réponse sous 48h ouvrées</div></div></div>
         <div class="ct-det"><span class="ct-icon">🕐</span><div><div style="font-weight:500;font-size:14px">Inscriptions ouvertes toute l'année</div><div style="font-size:13px;color:var(--text-q)">Pas de date butoir — démarrage dès que vous êtes prêt(e)</div></div></div>
       </div>
@@ -804,6 +865,25 @@ footer{background:#060F1E;padding:60px 5% 32px;color:rgba(255,255,255,.4)}
         <p>Merci <span id="success-prenom"></span>. Notre équipe analyse votre dossier et vous contacte sous <strong>48h ouvrées</strong> pour votre diagnostic d'éligibilité gratuit.</p>
       </div>
       <script>
+        // Hamburger menu
+        (function(){
+          var btn=document.getElementById('hamburger');
+          var nav=document.getElementById('nav-links');
+          if(!btn||!nav) return;
+          btn.addEventListener('click',function(){
+            var open=nav.classList.toggle('open');
+            btn.classList.toggle('open',open);
+            btn.setAttribute('aria-expanded',String(open));
+          });
+          nav.querySelectorAll('a').forEach(function(a){
+            a.addEventListener('click',function(){
+              nav.classList.remove('open');
+              btn.classList.remove('open');
+              btn.setAttribute('aria-expanded','false');
+            });
+          });
+        })();
+
         document.getElementById('contact-form').addEventListener('submit', function(e) {
           e.preventDefault();
           var form = this;
